@@ -5,7 +5,7 @@
 books = ['HARDCORE TWENTY-FOUR', 'OATHBRINGER', 'END GAME', 'THE MIDNIGHT LINE', 'THE ROOSTER BAR']
 
 # We can puts the array and get all of the values back
-# puts books
+# p books
 
 # we can also simply use the letter p and then the array to see the array visually on the command line
 # p books
