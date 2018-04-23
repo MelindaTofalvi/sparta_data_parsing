@@ -1,15 +1,22 @@
 require 'json'
+require 'httparty'
 
 class ParseJson
 
 	attr_accessor :json_file
 
-	def initialize(json_file)
-		@json_file = JSON.parse(File.read(json_file))
+	def initialize
+		@json_file = JSON.parse(HTTParty::get('http://api.fixer.io/latest').body) #File.read(json_file)
 	end
 
 end
 
-json = ParseJson.new('json_exchange_rates.json')
+call = ParseJson.new
 
-p json.json_file.class
+p call.json_file
+
+# json = ParseJson.new('json_exchange_rates.json')
+
+# p json.json_file.class
+
+#different functionality: 
